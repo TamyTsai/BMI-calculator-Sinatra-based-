@@ -14,9 +14,33 @@ post '/' do #當網址於根目錄 且使用POST方法
     # 透過網路傳輸過來的東西 都是字串，所以要轉成數字
     # Ruby的數字運算 整數/整數只會得到整數 故 浮點的數字 而非轉成整數
     w = params[:weight].to_f
-    bmi = w / (h * h) #　在ruby檔做運算，把運算結果存放到 變數，讓html去呈現 變數
-    erb :result, layout: :layout, locals: {result: bmi}
+    bmi = sprintf("%.2f", w / (h * h)).to_f
+    #　在ruby檔做運算，把運算結果存放到 變數，讓html去呈現 變數
+    # sprintf("%.2f", w / (h * h))方法讓計算結果取到 小數點後兩位，但會變成字串，為了與BMI標準作比較，要轉回數字
+
+    if bmi < 18.5
+        resultTextNormal = ''
+        resultTextAbnormal = '體重過輕'
+    elsif bmi >= 18.5 && bmi < 24
+        resultTextNormal = '健康體位'
+        resultTextAbnormal = ''
+    elsif bmi >= 24 && bmi < 27 
+        resultTextNormal = ''
+        resultTextAbnormal = '過重'
+    elsif bmi >= 27 && bmi < 30
+        resultTextNormal = ''
+        resultTextAbnormal = '輕度肥胖'
+    elsif bmi >= 30 && bmi < 35 
+        resultTextNormal = ''
+        resultTextAbnormal = '中度肥胖'
+    else 
+        resultTextNormal = ''
+        resultTextAbnormal = '重度肥胖'
+    end
+        
+    erb :result, layout: :layout, locals: {result: bmi, resultTextNormal: resultTextNormal, resultTextAbnormal: resultTextAbnormal}
     # 讀取views/result.erb檔案（沒有說網址設/form就會讀form.erb檔，什麼路徑對應讀哪一個erb檔都可以）
     # 帶一個 區域變數result（裝的值 是這裡 bmi存放的運算後值） 給views/result.erb檔案
+    # 冒號左邊是要給html用的區域變數名稱 冒號右邊是本程式碼區塊中的變數
     # 區域變數生命週期較實體變數短 比較不會污染其他地方
 end

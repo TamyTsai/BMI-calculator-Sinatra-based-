@@ -1,11 +1,9 @@
-<section class="result"> <!-- 右邊結果區塊 -->
+<section class="result"> <!-- 結果區塊 -->
 <h2>計算結果：</h2>
-<p id="resultNumber"></p>
-<div id="resultTextNormal"><%= result %></div>  <!-- 正常體位會顯示的文字區塊（非正常體位 此元素就被取代為空字串） -->  <!-- result為主程式傳送過來的區域變數 -->
-<div id="resultTextAbnormal"></div>  <!-- 非正常體位會顯示的文字區塊（正常體位 此元素就被取代為空字串） -->
+<p id="resultNumber"><%= result %></p>
+<div id="resultTextNormal"><%= resultTextNormal %></div>  <!-- 正常體位會顯示的文字區塊（非正常體位 此元素就被取代為空字串） -->  <!-- result為主程式傳送過來的區域變數 -->
+<div id="resultTextAbnormal"><%= resultTextAbnormal %></div>  <!-- 非正常體位會顯示的文字區塊（正常體位 此元素就被取代為空字串） -->
 </section>
-
-<div class="clearfix"></div> <!-- 前面使用float創造左右兩欄 需要清除 以撐開下面元素 -->
 
 <section class="bodyTable">
 <span class="bodyTableContent">

@@ -1,9 +1,12 @@
+<!-- 共用版面 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算器</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <!-- 引入MathJax以表達數學公式 -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- 引入MathJax以表達數學公式（設定檔 tex-mml-chtml.js 是同時測試 TeX 和 MathML 輸入選項的好方法。 可在MathJax的文件中找到更精簡的組合元件。） -->
 </head>
 <body>
     <%= yield %> 
