@@ -1,52 +1,54 @@
-<section class="result"> <!-- 結果區塊 -->
-<h2>計算結果：</h2>
-<p id="resultNumber"><%= result %></p>
-<div id="resultTextNormal"><%= resultTextNormal %></div>  <!-- 正常體位會顯示的文字區塊（非正常體位 此元素就被取代為空字串） -->  <!-- result為主程式傳送過來的區域變數 -->
-<div id="resultTextAbnormal"><%= resultTextAbnormal %></div>  <!-- 非正常體位會顯示的文字區塊（正常體位 此元素就被取代為空字串） -->
-</section>
-
-<section class="bodyTable">
-<span class="bodyTableContent">
-    <table border="1">
-        <thead>
-        <tr>
-            <th>成人肥胖定義</th>
-            <th>身體質量指數（BMI）</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr class="rowOdd">
-            <td>體重過輕</td>
-            <td>BMI &lt 18.5</td> <!-- 使用特殊字元 -->
-        </tr>
-        <tr class="rowEven">
-            <td>健康體位</td>
-            <td>18.5 &lt= BMI &lt 24</td>
-        </tr>
-        <tr class="rowOdd">
-            <td rowspan="0">體位異常</td> <!-- 垂直合併欄位到tobody最後一列 -->
-            <td class="rowOdd">過重：24 &lt= BMI &lt 27</td>
-        </tr>
-        <tr class="rowEven">
-            <td>輕度肥胖：27 &lt= BMI &lt 30</td>
-        </tr>
-        <tr class="rowOdd">
-            <td>中度肥胖：30 &lt= BMI &lt 35</td>
-        </tr>
-        <tr class="rowEven">
-            <td>重度肥胖：BMI &gt= 35</td>
-        </tr>
-        </tbody>
-        <tfoot>
-        <tr>
-            <td colspan="2" class="formula">$$BMI={體重（公斤）\over身高^2（公尺）}$$</td>
-            <!-- 水平合併2格欄位 -->
-            <!-- Latex和MathJax所用的邊界符號（delimeter）為雙錢字符$$，所以兩對雙錢字符號之間的部分就會被視為數學模式
-            （資料來源：https://ithelp.ithome.com.tw/m/articles/10290247） -->
-        </tr>
-        </tfoot>
-    </table>
-</span>
-
-<span class="dataResource">資料來源：衛生福利部國民健康署</span>
+<section class="resultPage">
+    <section class="result"> <!-- 結果區塊 -->
+        <h2>計算結果：</h2>
+        <p id="resultNumber"><%= result %></p>
+        <div id="resultTextNormal"><%= resultTextNormal %></div>  <!-- 正常體位會顯示的文字區塊（非正常體位 此元素就被取代為空字串） -->  <!-- resultTextNormal為 主程式 傳送過來的區域變數 -->
+        <div id="resultTextAbnormal"><%= resultTextAbnormal %></div>  <!-- 非正常體位會顯示的文字區塊（正常體位 此元素就被取代為空字串） -->
+    </section>
+    
+    <section class="bodyTable">
+        <span class="bodyTableContent">
+            <table border="1">
+                <thead>
+                <tr>
+                    <th>成人肥胖定義</th>
+                    <th>身體質量指數（BMI）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr class="rowOdd">
+                    <td>體重過輕</td>
+                    <td>BMI &lt 18.5</td> <!-- 使用特殊字元 -->
+                </tr>
+                <tr class="rowEven">
+                    <td>健康體位</td>
+                    <td>18.5 &lt= BMI &lt 24</td>
+                </tr>
+                <tr class="rowOdd">
+                    <td rowspan="0">體位異常</td> <!-- 垂直合併欄位到tobody最後一列 -->
+                    <td class="rowOdd">過重：24 &lt= BMI &lt 27</td>
+                </tr>
+                <tr class="rowEven">
+                    <td>輕度肥胖：27 &lt= BMI &lt 30</td>
+                </tr>
+                <tr class="rowOdd">
+                    <td>中度肥胖：30 &lt= BMI &lt 35</td>
+                </tr>
+                <tr class="rowEven">
+                    <td>重度肥胖：BMI &gt= 35</td>
+                </tr>
+                </tbody>
+                <tfoot>
+                <tr>
+                    <td colspan="2" class="formula">$$BMI={體重（公斤）\over身高^2（公尺）}$$</td>
+                    <!-- 水平合併2格欄位 -->
+                    <!-- Latex和MathJax所用的邊界符號（delimeter）為雙錢字符$$，所以兩對雙錢字符號之間的部分就會被視為數學模式
+                    （資料來源：https://ithelp.ithome.com.tw/m/articles/10290247） -->
+                </tr>
+                </tfoot>
+            </table>
+        </span>
+    
+        <span class="dataResource">資料來源：衛生福利部國民健康署</span>
+    </section>
 </section>

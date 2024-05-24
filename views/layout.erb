@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BMI計算器</title>
+    <link rel="stylesheet" href="/styles/normalize.css"> <!-- 引入normalize -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet"> <!-- 引入Open Sans Condensed字型 -->
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> <!-- 引入MathJax以表達數學公式 -->
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> <!-- 引入MathJax以表達數學公式（設定檔 tex-mml-chtml.js 是同時測試 TeX 和 MathML 輸入選項的好方法。 可在MathJax的文件中找到更精簡的組合元件。） -->
+    <link rel="stylesheet" href="/styles/style.css"> <!-- 引入自己寫的css -->
+    <!-- https://stackoverflow.com/questions/70719976/why-wont-my-css-stylesheet-work-in-sinatra -->
+    <!-- 主程式有寫set :public_folder, __dir__ + '/static' ，所以這裡的路徑從/static後的開始寫-->
+    <script src="/scripts/jquery-3.7.1.min.js"></script> <!-- 引入jQuery -->
 </head>
 <body>
     <%= yield %> 
     <!-- Ruby語法 -->
     <!--  yield 這個區塊改去讀去 主程式 erb 要讀取的檔案  -->
+    <script src="/scripts/script.js"></script> <!-- 引入自己寫的js -->
 </body>
 </html>
