@@ -1,0 +1,18 @@
+<section class="calculator">
+    <section class="fields"> 
+        <h1>BMI 計算器</h1>
+        <h2>輸入身高與體重以得到<br>身體質量指數！</h2>
+        <form action="/" method="POST"> <!-- action="表單點擊送出後 要送往的地方" method="要用什麼方式送出" -->
+            <div>
+                <label for="bodyHeight">身高</label> <!-- 點此輸入框標題就會跳到對應的輸入框（id為bodyHeight的輸入框） -->
+                <input type="number" id="bodyHeight" min="0" name="height"><span class="unit">公分</span> <!-- 限制輸入不為負數（最小為0） -->
+                <!-- 表單按下送出時 name會被送到/ 後端程式會去抓下來 -->
+            </div>
+            <div>
+                <label for="bodyWeight">體重</label>
+                <input type="number" id="bodyWeight" min="0" name="weight"><span class="unit">公斤</span>
+            </div>
+            <input type="submit" value="點我計算！">
+        </form>
+    </section>
+</section>
