@@ -62,7 +62,7 @@ http://localhost:4567/
 ## 資料夾及檔案說明
 - static - 靜態資源放置處
   - scripts - JS檔案放置處
-    - jquery-3.3.1.min.js - jQuery檔案
+    - jquery-3.7.1.min.js - jQuery檔案
     - script.js - 頁面JS檔案，負責部分網頁功能（前端驗證）
   - styles - 樣式放置處
     - normalize.css - normalize檔案
@@ -71,7 +71,10 @@ http://localhost:4567/
   - index.erb - 首頁
   - layout.erb - 共用版面
   - result.erb - 計算結果頁面
+- config.ru - Rack
 - function.rb - 主程式（Ruby）
+- Gemfile - 描述Ruby程式中gem相依賴關係的檔案
+- Gemfile.lock - 實際安裝的gem版本紀錄
 
 
 ## 專案技術
