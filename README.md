@@ -37,17 +37,9 @@
 ```bash
 $ brew install ruby
 ```
-### 安裝Sinatra
+### 安裝Sinatra、puma、Sinatra contrib
 ```bash
-$ gem install sinatra
-```
-### 安裝puma
-```bash
-$ gem install puma
-```
-### 安裝Sinatra contrib
-```bash
-$ gem install sinatra-contrib
+$ bundle install
 ```
 ### 取得專案
 ```bash
@@ -94,4 +86,4 @@ http://localhost:4567/
 - Ruby v2.7.8
   - Sinatra v4.0.0
   - Sinatra-contrib v4.0.0
-  - puma v6.0.0
+  - puma v6.4.2
