@@ -75,7 +75,7 @@ http://localhost:4567/
   - styles - 樣式放置處
     - normalize.css - normalize檔案
     - style.css - 頁面樣式檔案
-- views - 螢幕外觀放置處
+- views - 畫面放置處
   - index.erb - 首頁
   - layout.erb - 共用版面
   - result.erb - 計算結果頁面
