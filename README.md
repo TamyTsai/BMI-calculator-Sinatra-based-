@@ -39,9 +39,9 @@
 
 ## 安裝
 以下皆為於macOS環境運行
-### 安裝Ruby
+### 安裝Ruby v2.7.8
 ```bash
-$ brew install ruby
+$ ruby-install ruby 2.7.8
 ```
 ### 安裝Sinatra、puma、Sinatra contrib
 ```bash
