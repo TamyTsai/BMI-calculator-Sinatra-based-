@@ -98,7 +98,7 @@ http://localhost:4567/
   - puma v6.4.2 -->
 
 ## 專案技術
-- 前端：HTML、CSS、jQurey
+- 前端：HTML、CSS、jQuery
 - 後端：Sinatra
 - 版本控制：Git
 
